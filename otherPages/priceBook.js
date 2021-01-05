@@ -7,7 +7,7 @@ function handleOnClick(){
     let timePref = document.getElementById("timePref").value;
 
     setInLocalStorage(firstName,lastName,email,dayPref,timePref);
-    getFromLocalStorage()
+    
 }
 
 function setInLocalStorage(firstName,lastName,email,dayPref,timePref){
@@ -20,7 +20,7 @@ function setInLocalStorage(firstName,lastName,email,dayPref,timePref){
 }
 
 function getFromLocalStorage(){
-    debugger;
+    
     let firstName = localStorage.setItem("FirstName");
     let lastName = localStorage.setItem("LastName");
     let dayPref = localStorage.setItem("DayPref");
@@ -30,7 +30,7 @@ function getFromLocalStorage(){
 }
 
 function fillTable(firstName,lastName,dayPref,timePref){
-    
+
     const initials = `${firstName.value[0]}.${lastName.value[0]}`;
     const timeSlot = `${dayPref}${timePref}`;
 
