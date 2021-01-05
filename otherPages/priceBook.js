@@ -7,7 +7,7 @@ function handleOnClick(){
     let timePref = document.getElementById("timePref").value;
 
     setInLocalStorage(firstName,lastName,email,dayPref,timePref);
-    
+    getFromLocalStorage();
 }
 
 function setInLocalStorage(firstName,lastName,email,dayPref,timePref){
@@ -21,19 +21,21 @@ function setInLocalStorage(firstName,lastName,email,dayPref,timePref){
 
 function getFromLocalStorage(){
     
-    let firstName = localStorage.setItem("FirstName");
-    let lastName = localStorage.setItem("LastName");
-    let dayPref = localStorage.setItem("DayPref");
-    let timePref = localStorage.setItem("TimePref");
+    let firstName = localStorage.getItem("FirstName");
+    let lastName = localStorage.getItem("LastName");
+    let dayPref = localStorage.getItem("DayPref");
+    let timePref = localStorage.getItem("TimePref");
 
     fillTable(firstName,lastName,dayPref,timePref)
 }
 
 function fillTable(firstName,lastName,dayPref,timePref){
 
-    const initials = `${firstName.value[0]}.${lastName.value[0]}`;
+    const initials = `${firstName.charAt(0)}.${lastName.charAt(0)}`;
     const timeSlot = `${dayPref}${timePref}`;
 
-    document.getElementById(timeSlot).value = initials;
+    document.getElementById(timeSlot).innerText = initials;
 
 } 
+
+//THIS ALL STILL NEEDS A CATCH FOR ERRORS OR IF A VALUE IS EMPTY
