@@ -46,30 +46,53 @@
         <tbody>
           <tr>
             <th scope="row">Morning</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="mM"></td>
+            <td id="tM"></td>
+            <td id="wM"></td>
+            <td id="thM"></td>
+            <td id="fM"></td>
           </tr>
           <tr>
             <th scope="row">Afternoon</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="mA"></td>
+            <td id="tA"></td>
+            <td id="wA"></td>
+            <td id="thA"></td>
+            <td id="fA"></td>
           </tr>
           <tr>
             <th scope="row">Evening</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="mE"></td>
+            <td id="tE"></td>
+            <td id="wE"></td>
+            <td id="thE"></td>
+            <td id="fE"></td>
           </tr>
         </tbody>
       </table>
+
+      <form class="form-inline">
+        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Day</label>
+        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+          <option selected>Choose...</option>
+          <option value="1">Monday</option>
+          <option value="2">Tuesday</option>
+          <option value="3">Wednesday</option>
+          <option value="4">Thursday</option>
+          <option value="5">Friday</option>
+        </select>
+
+        <form class="form-inline">
+          <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Time slot</label>
+          <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+            <option selected>Choose...</option>
+            <option value="1">Morning</option>
+            <option value="2">Afternoon</option>
+            <option value="3">Evening</option>
+          </select>
+      
+        <button type="submit" class="btn btn-primary my-1">Submit</button>
+      </form>
       
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
