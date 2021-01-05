@@ -74,39 +74,39 @@
 
       <form>
         <div class="form-row">
-           <div class="col-3" id="firstName">
-            <input type="text" class="form-control" placeholder="First Name">
+           <div class="col-3">
+            <input type="text" class="form-control" placeholder="First Name" id="firstName">
           </div>
-          <div class="col-3" id="lastName">
-            <input type="text" class="form-control" placeholder="Last Name">
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="Last Name" id="lastName">
           </div>
-          <div class="col-3" id="email">
-            <input type="text" class="form-control" placeholder="email@example.com">
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="email@example.com" id="email">
           </div>
         </div>
       </form>
 
       <form class="form-inline">
-        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Day</label>
-        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+        <label class="my-1 mr-2" for="dayPref">Day</label>
+        <select class="custom-select my-1 mr-sm-2" id="dayPref">
           <option selected>Choose...</option>
-          <option value="1">Monday</option>
-          <option value="2">Tuesday</option>
-          <option value="3">Wednesday</option>
-          <option value="4">Thursday</option>
-          <option value="5">Friday</option>
+          <option value="m">Monday</option>
+          <option value="t">Tuesday</option>
+          <option value="w">Wednesday</option>
+          <option value="th">Thursday</option>
+          <option value="f">Friday</option>
         </select>
 
         <form class="form-inline">
-          <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Time slot</label>
-          <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+          <label class="my-1 mr-2" for="timePref">Time slot</label>
+          <select class="custom-select my-1 mr-sm-2" id="timePref">
             <option selected>Choose...</option>
-            <option value="1">Morning</option>
-            <option value="2">Afternoon</option>
-            <option value="3">Evening</option>
+            <option value="M">Morning</option>
+            <option value="A">Afternoon</option>
+            <option value="E">Evening</option>
           </select>
       
-        <button type="submit" class="btn btn-primary my-1">Submit</button>
+        <button type="submit" class="btn btn-primary my-1" onclick="handleOnClick()">Submit</button>
       </form>
       
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
