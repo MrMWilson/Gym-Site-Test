@@ -1,12 +1,13 @@
 function handleOnClick(){
-    
-    let firstName = document.getElementById("firstName").value;
-    let lastName = document.getElementById("lastName").value;
-    let email = document.getElementById("email").value;
-    let dayPref = document.getElementById("dayPref").value;
-    let timePref = document.getElementById("timePref").value;
+    debugger;
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const dayPref = document.getElementById("dayPref").value;
+    const timePref = document.getElementById("timePref").value;
 
     setInLocalStorage(firstName,lastName,email,dayPref,timePref);
+
     getFromLocalStorage();
 }
 
@@ -21,10 +22,10 @@ function setInLocalStorage(firstName,lastName,email,dayPref,timePref){
 
 function getFromLocalStorage(){
     
-    let firstName = localStorage.getItem("FirstName");
-    let lastName = localStorage.getItem("LastName");
-    let dayPref = localStorage.getItem("DayPref");
-    let timePref = localStorage.getItem("TimePref");
+    const firstName = localStorage.getItem("FirstName");
+    const lastName = localStorage.getItem("LastName");
+    const dayPref = localStorage.getItem("DayPref");
+    const timePref = localStorage.getItem("TimePref");
 
     fillTable(firstName,lastName,dayPref,timePref)
 }
@@ -34,7 +35,9 @@ function fillTable(firstName,lastName,dayPref,timePref){
     const initials = `${firstName.charAt(0)}.${lastName.charAt(0)}`;
     const timeSlot = `${dayPref}${timePref}`;
 
-    document.getElementById(timeSlot).innerText = initials;
+    document.getElementById(timeSlot).innertext = initials;
+
+    
 
 } 
 
