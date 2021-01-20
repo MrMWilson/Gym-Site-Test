@@ -6,9 +6,14 @@ function handleOnClick(){
     const dayPref = document.getElementById("dayPref").value;
     const timePref = document.getElementById("timePref").value;
 
-    setInLocalStorage(firstName,lastName,email,dayPref,timePref);
+    if(firstName || lastName || email || dayPref || timePref === ""){
+        document.getElementById("failure-text-location").textContent = "Please make sure to fill out all the fields before submitting."
+    }else{
+        setInLocalStorage(firstName,lastName,email,dayPref,timePref);
 
-    getFromLocalStorage();
+        getFromLocalStorage();
+    }
+       
 }
 
 function setInLocalStorage(firstName,lastName,email,dayPref,timePref){
@@ -41,4 +46,3 @@ function fillTable(firstName,lastName,dayPref,timePref){
 
 } 
 
-//THIS ALL STILL NEEDS A CATCH FOR ERRORS OR IF A VALUE IS EMPTY
