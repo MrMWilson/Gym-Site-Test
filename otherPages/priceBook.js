@@ -6,12 +6,13 @@ function handleOnClick(){
     const dayPref = document.getElementById("dayPref").value;
     const timePref = document.getElementById("timePref").value;
 
-    if(firstName || lastName || email || dayPref || timePref === ""){
-        document.getElementById("failure-text-location").textContent = "Please make sure to fill out all the fields before submitting."
-    }else{
+    if(firstName && lastName && email && dayPref && timePref !== ""){
         setInLocalStorage(firstName,lastName,email,dayPref,timePref);
 
         getFromLocalStorage();
+        
+    }else{
+        document.getElementById("failure-text-location").textContent = "Please make sure to fill out all the fields before submitting."
     }
        
 }
@@ -40,9 +41,6 @@ function fillTable(firstName,lastName,dayPref,timePref){
     const initials = `${firstName.charAt(0)}.${lastName.charAt(0)}`;
     const timeSlot = `${dayPref}${timePref}`;
 
-    document.getElementById(timeSlot).innertext = initials;
-
-    
-
+    document.getElementById(timeSlot).textContent = initials;
 } 
 
